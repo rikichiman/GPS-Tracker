@@ -1,0 +1,327 @@
+.divnav{
+	height: 50px;
+	width: 100%;
+	background-color: rgba(19, 35, 47, 0.9);
+	margin:auto;
+	padding: auto;
+	position: fixed;
+	z-index: 2000;
+	border-bottom: 1px solid white;
+}
+.divnav ul li{
+	list-style: none;
+	height: 50px;
+	float: left;
+	padding: 0%;
+	margin: 0%;
+}
+#li_bar
+{
+	width: 50px;
+	padding-left: 5px; 
+}
+
+#li_acount
+{
+	width:20%;
+	color: white;
+	text-align: center;
+	padding: 3px;
+
+}
+
+#li_logo
+{
+	color: white;
+	padding: 5px;
+	font-size: 200%;
+	width: calc(20% - 50px);
+	text-align: left;
+	padding-left:1%;
+}
+#li_search
+{
+	width: 60%;
+	text-align: center;
+	padding: 8px;
+}
+#li_search > div{
+	padding: 0%;
+	width: 50%;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.divnav ul{
+	width: 100%;
+	padding: 0%;
+}
+
+#bar
+{
+	width: 40px;
+	height: auto;
+	z-index: 1000;
+	border-radius: 5px;
+	padding: 0%;
+}
+#bar  hr
+{
+	width: 40px;
+	height: auto;
+	border: 3px solid white;
+	border-radius: 10px;
+	list-style: none;
+	padding: 0;
+	margin-top: 5px;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	
+}
+
+
+.textbox , #place-search-input
+{
+	width: 100%;
+	height: 35px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: none;
+	float: left;
+	padding-left: 5%;
+	background-color: rgba(241, 239, 239, 0.952);
+}
+
+.mq-dropdown-menu , .mq-with-results{
+	text-align: left;
+}
+
+#li_search > div > button , .mq-input-icon , .mq-icon-clear
+{
+	width: 40px;
+	height: 35px;
+	border: none;
+	color: rgba(19, 35, 47, 0.9);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: rgba(241, 239, 239, 0.952);
+	margin-left: -42px;
+}
+
+#li_search > div > button:focus , .textbox:focus , #place-search-input:focus{
+	outline: none;
+	background-color: white;
+}
+
+#prifile_picture{
+	width: 46px;
+	height: 46px;
+	border-radius: 50px;
+	margin-left: calc(100% - 50px);
+	text-align: center;
+}
+
+#prifile_picture > img{
+	width: 44px;
+	height: 44px;
+	border-radius: 40px;
+	margin: auto;
+	line-height: 0%;
+	display: block;
+}
+
+
+#sec_nav
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 3000;
+
+}
+
+#left_bar
+{
+	width: 300px;
+	height: 100%;
+	background-color: rgba(19, 35, 47);
+	float: left;
+	text-align: center;
+	box-shadow: 10px 10px 20px rgba(19, 35, 47 , 0.7);
+}
+
+#right_bar
+{
+	float: right;
+	background-color: rgba(19, 35, 47, 0.411);
+	width: calc( 100% - 300px );
+	height: 100%;
+}
+
+#previous
+{
+	width: 100%;
+	height: 50px;
+}
+
+#previous > ul
+{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+#previous > ul > li{
+	float: left;
+	list-style: none;
+	color: white;
+}
+#button_p
+{
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+}
+
+#logo
+{
+	font-size: 200%;
+	text-align: center;
+	padding: 3px;
+	padding-left: 50px;
+}
+
+#profile_image
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	border: 2px solid white;
+	margin: auto;
+	margin-top: 15%;
+	color: white;
+	padding-bottom: 4px;
+}
+
+#profile_image > img{
+	width: 97px;
+	height: 97px;
+	margin: 0;
+	padding: 0;
+	border-radius: 100px;
+	display: block;
+}
+
+
+
+#username
+{
+	color: white;
+	margin: 10px;
+}
+
+#user_info
+{
+	width: 100%;
+	text-align: left;
+	display: block;
+	margin-top: 20%;
+	height: auto;
+	padding: 5px;
+}
+#user_info > ul
+{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#user_info > ul > li{
+	list-style: none;
+	float: left;
+	padding: 0;
+	height: 30px;
+}
+
+#li_flag , #li_map_cible , #li_emailicon , .fa-cog , .fa-sign-out-alt
+{
+	color: white;
+}
+#li_label > label , #li_contry > p , #li_email > p , #ul_setting > li > label , #ul_logout > li > label{
+	color: white;
+	padding: 4px;
+}
+#li_label{
+	width: 70px;
+	text-align: center;
+}
+
+#user_info > hr{
+	opacity: 0.1;
+}
+
+#target_list > ul > li{
+	color: white;
+
+}
+#target_list
+{
+	height: auto;
+}
+#target_list > ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 2px;
+	height: auto;
+}
+
+#list_cibles
+{
+	padding: 5px;
+	margin: 2px;
+	text-align: center;
+}
+
+#list_cibles > select 
+{
+	width: 180px;
+	padding: 2px;
+	border-radius: 5px;
+	outline: none;
+	background-color: white;
+	color: black;
+}
+
+#list_cibles > select > option
+{
+	text-align: center;
+	outline: none;
+}
+
+#list_cibles > select::after
+{
+	outline: none;
+}
+
+.fa-sign-out-alt > label
+{
+	text-decoration: none;
+	outline: none;
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+	color: white;
+}
+
+#draggable
+{
+	position: absolute;
+	z-index: 1800;
+	width: auto;
+	height: 100px;
+	background-color: red;
+}
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>    
+    <link type="text/css" rel="stylesheet" href="../css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="../css/profile.css">
+		<link type="text/css" rel="stylesheet" href="../fontawesome-free-5.1.0/css/all.css">
+		<link type="text/css" rel="stylesheet" href="../fontawesome-free-5.1.0/css/fontawesome.css">
+		<link rel="icon" href="../images/logoIDTracker.png" sizes="30x30" type="mage/png"> 
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
+
+	<!--leaflet-->
+	 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+	 crossorigin=""></script>
+
+
+
+	 <!--Rouuutinng-->
+		<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />-->
+	 <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=5tGrkZevZN0JXYL1EJ3H3URNTG9U0moG"></script>
+	 <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=5tGrkZevZN0JXYL1EJ3H3URNTG9U0moG"></script>
+
+
+	 <!--Routing machine-->
+
+	 <!--Drawing-->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>	
+
+		
+		
+		<!--Search-->
+		<script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
+	
+		<!--Traffic-->		
+		<script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-traffic.js?key=5tGrkZevZN0JXYL1EJ3H3URNTG9U0moG"></script>
+
+		<!--3D mapquest-->
+		<script src="https://api.mqcdn.com/sdk/mapquest-gl-js/v0.4.0/mapquest-gl.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-gl-js/v0.4.0/mapquest-gl.css"/>
+		
+			<!--leaflet CSS-->
+			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+			integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+			crossorigin=""/>
+
+		<!--Firebase-->
+		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+
+	 <!--Firebase-->
+	 <script src="../js/firebase.js"></script>
+	
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<!--	<script src="../js/globale.js"></script>-->	
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet-src.js" crossorigin=""></script>
+</head>
+
+
+<body>
+<!--this is left navbar-->
+<section id="sec_nav">
+		<div id="left_bar">
+			<!--previous button and logo-->
+			<div id="previous">
+					<ul>
+							<li id="button_p" class="fas fa-arrow-left fa-2x"></li>
+						<!--	<li id="logo">ID Tracker</li>-->
+					</ul>
+			</div>
+
+			<!--to show profile picture-->
+			<div id="profile_image" class="fas fa-user-circle fa-7x"></div>
+			<label id="username"></label>
+
+			<!--sho user informations-->
+			<div id="user_info">
+					<!--email info-->
+					<ul id="ul_email">
+							<li id="li_emailicon" class="fa fa-at fa-2x"></li>
+							<li id="li_label">
+								<label>Email : </label>
+							</li>
+							<li id="li_email"><p></p></li>
+					</ul><br><hr>
+					<!--show victims-->
+					<ul id="ul_cible">
+							<li id="li_map_cible" class="fa fa-map fa-2x"></li>
+							<li id="li_label">
+								<label>Targets : </label>
+							</li>
+							<li id="list_cibles">
+								<select id="selectlist" >
+										<option value="" selected disabled hidden>Choose here</option>
+								</select>
+							</li>
+					</ul><br><hr>
+					<ul id="ul_setting">
+							<li class="fas fa-cog fa-2x"></li>
+							<li><label>Setting</label></li>
+					</ul><br><hr>
+					<ul id="ul_logout">
+							<li class="fas fa-sign-out-alt fa-2x"></li>
+							<li><label>Logout</label></li>
+					</ul>
+			</div>
+		</div>
+
+		<div id="right_bar"></div> <!--used to hide left navbar and disable div map-->
+</section>
+<!--this is the body of map-->
+<section id="principale">
+		<div  class="divnav">
+			<ul>
+					<li id="li_bar" class="small_bar">
+							<div id="bar">
+									<hr><hr><hr><hr>
+								</div>
+					</li>
+					<li id="li_logo" class="small_bar">
+						ID Tracker
+					</li>
+					<li id="li_search">
+						<div>
+								<input type="search" id="place-search-input" placeholder="Start Searching..."/>
+						  <!--<input type="search" class="textbox" id="textbox" placeholder="Search">
+							<button title="Search" type="submit" class="submit fas fa-search fa-2x"></button>
+							<span class="mq-place-search textbox">
+								<input class="mq-input"  id="textbox"/>
+								<button class="mq-input-icon mq-icon-clear"><svg></svg></button>
+							</span>
+
+							<span class="mq-dropdown-menu mq-with-results">
+								<div>
+									<span class="mq-results">
+										<div class="mq-result">
+											<span class="mq-result-icon"><svg></svg></span>
+											<span class="mq-name"></span>
+											<span class="mq-address"></span>
+										</div>
+										
+									</span>
+								</div>
+							</span>-->
+							
+						</div>
+					</li>
+					<li id="li_acount" class="small_bar">
+						<div id="prifile_picture" class="fas fa-user-circle fa-3x">
+
+						</div>
+					</li>
+			</ul>
+</div>
+	<div id="divmap" class="divmap">
+	<div id="map2"></div>
+			<!--<div id="draggable"><h1>draggable</h1></div>-->
+	</div>
+	<div id="option">
+				<p id="selectedTarget">ffff</p>
+
+				<div id="live_history">
+				<p><i><input type="radio" id="r_live" name="live_history" value="live" checked/></i> <strong>Vue en direct </strong> </p>
+				<p><i> <input type="radio" id="r_history" name="live_history" value="history"/> </i>  <strong>History </strong></p>
+				</div>
+	</div>
+	<div class="locatme"><img src="../images/locateme.png"></div>
+	<button id="show_more" class="fas fa-ellipsis-v fa-2x"></button>
+	<div id="definePeriode">
+								<p id="close_periode"></p>
+                <p id="p_du"> <i><select class="date" id="du"><option value="choisir la date" selected disabled hidden>choisir la date</option></select> </i> </p>
+	</div>
+</section>
+
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>-->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.4.0/gpx.min.js"></script>-->
+
+<script src="../js/map.js"></script>
+<script src="../js/profile.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+
+
+<!---<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>-->
+	
+</body>
+</html>

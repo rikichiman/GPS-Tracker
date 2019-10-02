@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In</title>    
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="css/signIn.css">
+	<link type="text/css" rel="stylesheet" href="css/footer.css">
+  <link type="text/css" rel="stylesheet" href="fontawesome-free-5.1.0/css/all.css">
+  
+  
+	
+	<link rel="icon" href="images/logoIDTracker.png" sizes="30x30" type="mage/png"> 
+	
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/globale.js"></script>
+	
+</head>
+<body >
+
+<section id="principale">
+	<!--<nav id="navbar">
+		<div id="logo">ID Tracker</div>
+	</nav>-->
+	<div class="form">
+	<!--   	option  -->
+	<ul class="tab-group">
+        <li class="tab active"><a href="#signup" id="signuphref">Sign Up</a></li>
+        <li class="tab"><a href="#login" id="loginhref">Log In</a></li>
+    </ul>
+	<!--   	------------------  -->
+	
+<div class="tab-content">
+<div id="signup">   
+       <h1>Sign Up for Free</h1>
+<form id="signup-form" onsubmit="return false">
+    <div id="profile"></div>
+    <div id="choose">
+        <span id='selectpicture' >Choose picture</span>
+        <input type='file' accept='.jpg, .png' id='fileToUploid'>
+    </div>
+  <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" id="firstname"/>
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off" id="lastname"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" id="email"/>
+          </div>
+          
+          <div class="field-wrap">
+              <label>
+                Password<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off" id="password" class="password"/>
+            </div>
+
+            <div class="field-wrap">
+                <label>
+                  Confirme Password<span class="req">*</span>
+                </label>
+                <input type="password"required autocomplete="off" id="confirmepassword" class="password"/>
+            </div>
+            <progress id="upload"></progress>
+          <button type="submit" class="button button-block" id="getStarted">Get Started</button>
+          
+</form>
+<div class="firebaseui-sign-up"></div>
+	</div>			
+			
+		 <div id="login">   
+          <h1>Welcome Back!</h1>
+         <br><p id="msgerror"></p><br>
+          
+            <div class="field-wrap">
+            <label>
+              Email Address or phone number<span class="req">*</span>
+            </label>
+            <input id="email_log" type="email" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input id="password_log" type="password" required autocomplete="off"/>
+          </div>
+          <div class="firebaseui-sign-up"></div>
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="button button-block" id="btnlogin">Log In</button>
+        </div>	
+		</div> <!-- tab-contnet-->
+		
+		
+	</div>
+  
+  <footer>
+      <div class="container">
+        <p>Devlopped by Omar Izem and Aymane Drif <a href=""> Copyright</a> ESTF</p>
+      </div>
+    </footer>
+</section>	
+
+</body>
+</html>

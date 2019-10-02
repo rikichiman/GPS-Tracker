@@ -1,0 +1,22 @@
+footer {
+  color: #666;
+  background: white;
+  bottom: 0px;
+  padding: 5px 0 5px 0;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  text-align: center;
+  width: auto;
+  bottom: 0px;
+}
+
+footer a {
+  color: #999;
+}
+footer a:hover {
+  color: #efefef;
+}
+
+
+.container {
+  max-width: 1400px;
+}

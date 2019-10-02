@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/globale.js"></script>
+</head>
+<body>
+<script>
+	if( sessionStorage.getItem("userId") == null)
+		{
+           // alert("is null");
+                //$(location).attr("href" , '../index.html');
+                //window.open('../index.html' , '_self');
+                location.href = '../index.html';
+               // $("body").load('../index.html');
+        }
+    else
+    {
+       // alert("is not null");
+        $(location).attr("href" , 'profile.html');
+        //window.open('profile.html' , '_self');
+        //$("body").load('profile.html');
+    }
+</script>
+</body>
+</html>
